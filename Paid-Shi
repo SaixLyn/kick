@@ -1,4 +1,4 @@
-local whitelistURL = "https://raw.githubusercontent.com/TheManWhoCantBeMove-D/G/refs/heads/main/Tine2199" -- ishi PALITAN montong link nato
+local whitelistURL = "https://raw.githubusercontent.com/SaixLyn/Whitelist/refs/heads/main/bayad%20ka%20muna"
 
 local success, data = pcall(function()
 	return game:HttpGet(whitelistURL)
