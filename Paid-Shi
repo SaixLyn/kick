@@ -1,0 +1,33 @@
+local whitelistURL = "https://raw.githubusercontent.com/TheManWhoCantBeMove-D/G/refs/heads/main/Tine2199" -- ishi PALITAN montong link nato
+
+local success, data = pcall(function()
+	return game:HttpGet(whitelistURL)
+end)
+
+if not success then
+	warn("[Whitelist] ❌ Failed to load whitelist from URL!")
+	return
+end
+
+local Whitelist = loadstring(data)()
+
+local player = game.Players.LocalPlayer
+local userId = player.UserId
+local username = player.Name
+
+local function isWhitelisted()
+	for _, entry in pairs(Whitelist.Users or {}) do
+		if entry == username or entry == userId then
+			return true
+		end
+	end
+	return false
+end
+
+if isWhitelisted() then
+	print("[Whitelist] ✅ Access granted to " .. username)
+	-- code mo dito shi
+else
+	warn("[Whitelist] ❌ Access denied for " .. username)
+	player:Kick("Contact  FB: San Pablo Aoshi.")
+end
