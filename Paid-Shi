@@ -26,7 +26,7 @@ end
 
 if isWhitelisted() then
 	print("[Whitelist] ✅ Access granted to " .. username)
-	-- code mo dito shi
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SaixLyn/Shi-V2/refs/heads/main/ShiV2Main.Lua",true))()
 else
 	warn("[Whitelist] ❌ Access denied for " .. username)
 	player:Kick("Contact  FB: San Pablo Aoshi.")
